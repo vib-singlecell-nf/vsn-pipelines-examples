@@ -15,7 +15,7 @@ The "Feature / cell matrix (filtered)" data was downloaded from 10x Genomics,
     wget http://cf.10xgenomics.com/samples/cell-exp/3.0.0/pbmc_10k_v3/pbmc_10k_v3_filtered_feature_bc_matrix.tar.gz
 
 When using 10x data as an input, the pipeline assumes the files are in the typical Cell Ranger directory structure.
-This is not the case when downloading the processed counts from the 10x sebsite, so we will put them into the proper format::
+This is not the case when downloading the processed counts from the 10x website, so we will put them into the proper format::
 
     mkdir -p pbmc10k/outs/
     tar xvf pbmc_10k_v3_filtered_feature_bc_matrix.tar.gz -C pbmc10k/outs/
@@ -31,9 +31,6 @@ which results in::
             └── matrix.mtx.gz
 
     2 directories, 3 files
-
-readlink -f pbmc10k/outs/
-/ddn1/vol1/staging/leuven/stg_00002/lcb/cflerin/analysis/pbmc10k/dsl2/pbmc10k/outs
 
 So, in the nextflow config file, the tenx input channel should be set to::
 
@@ -64,7 +61,7 @@ We use a combination of profiles to build the config file:
 
     nextflow config vib-singlecell-nf/vsn-pipelines \
         -profile tenx,single_sample_scenic,scenic_use_cistarget_motifs,scenic_use_cistarget_tracks,hg38,singularity \
-        > pbmc10k.vsn-pipelines_v0.14.2_default.config
+        > pbmc10k.vsn-pipelines.complete.config
 
 Important variables to check in the config:
 
@@ -75,6 +72,9 @@ Important variables to check in the config:
 * ``params.sc.scanpy.feature_selection``
 * ``params.sc.scanpy.clustering``
 
+The complete config file used here is available at: `pbmc10k/pbmc10k.vsn-pipelines.complete.config`_.
+
+.. _`pbmc10k/pbmc10k.vsn-pipelines.complete.config`: https://github.com/vib-singlecell-nf/vsn-pipelines-examples/blob/master/pbmc10k/pbmc10k.vsn-pipelines.complete.config
 
 Run the VSN-pipelines project
 -----------------------------
@@ -86,7 +86,7 @@ While the overall goal is to run the "best practices steps" and SCENIC together,
 Then, we can move on to run the resource-intensive SCENIC steps.
 Even though we created a profile with single_sample and scenic options together, we can run just the single_sample workflow first::
 
-    nextflow -C pbmc10k.vsn-pipelines_v0.14.2.config \
+    nextflow -C pbmc10k.vsn-pipelines.complete.config \
         run vib-singlecell-nf/vsn-pipelines \
         -entry single_sample \
         -r 0.14.2
@@ -98,7 +98,7 @@ Second pass
 
 Once the filters look ok, we can re-start the pipeline with the full SCENIC steps enabled::
 
-    nextflow -C pbmc10k.vsn-pipelines_v0.14.2.config \
+    nextflow -C pbmc10k.vsn-pipelines.complete.config \
         run vib-singlecell-nf/vsn-pipelines \
         -entry single_sample_scenic \
         -r 0.14.2 -resume
