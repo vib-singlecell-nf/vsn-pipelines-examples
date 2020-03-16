@@ -15,10 +15,6 @@ VSN-Pipelines-examples
     Hung
     PBMC10k
 
-    :caption: Contents:
-
-
-
 
 .. Indices and tables
 .. ==================
