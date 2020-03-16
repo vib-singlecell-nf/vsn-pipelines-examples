@@ -48,7 +48,7 @@ Harmony and SCENIC (append mode)
         -profile tenx,pcacv,harmony,scenic_append_only,singularity \
         > nextflow.config
 
-The generated config is available at the ``vsn-pipelines`` GitHub repository: `kurmangaliyevyz_2019/10x_harmony_scenic.config`_. You should update The lines commented with " TO EDIT" with the correct information.
+The generated config is available at the ``vsn-pipelines`` GitHub repository: `kurmangaliyevyz_2019/10x_harmony_scenic.config`_. You should update The lines commented with "TO EDIT" with the correct information.
 
 .. _`kurmangaliyevyz_2019/10x_harmony_scenic.config`: https://github.com/vib-singlecell-nf/vsn-pipelines-examples/blob/master/kurmangaliyevyz_2019/10x_harmony_scenic.config
 
