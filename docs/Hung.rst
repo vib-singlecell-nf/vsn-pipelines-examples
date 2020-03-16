@@ -6,8 +6,8 @@ Some links related to the case study:
 - Paper: https://www.pnas.org/content/117/3/1514.abstract
 - GEO: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE120537
 
-Analysis of 10xGenomics Samples
-*******************************
+Analysis of 10x Genomics Samples
+********************************
 
 The following command was used to generate the config:
 
@@ -19,7 +19,7 @@ The following command was used to generate the config:
         > nextflow.config
 
 
-The generated config is available at the ``vsn-pipelines-examples`` GitHub repository: `hungr_2019/10x_bbknn_scenic.config`_.  You should provide The lines commented with "TO EDIT" with the correct information.
+The generated config is available at the ``vsn-pipelines-examples`` GitHub repository: `hungr_2019/10x_bbknn_scenic.config`_.  You should provide the lines commented with "TO EDIT" with the correct information.
 
 .. _`hungr_2019/10x_bbknn_scenic.config`: https://github.com/vib-singlecell-nf/vsn-pipelines-examples/blob/master/hungr_2019/10x_bbknn_scenic.config
 

@@ -6,8 +6,8 @@ Some links related to the case study:
 - Paper: https://elifesciences.org/articles/50822
 - GEO: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE126139
 
-Analysis of 10xGenomics Samples
-*******************************
+Analysis of 10x Genomics Samples
+********************************
 
 BBKNN and SCENIC
 ++++++++++++++++
