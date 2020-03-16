@@ -16,6 +16,18 @@ VSN-Pipelines-examples
     PBMC10k
 
 
+Setup Nextflow
+--------------
+
+General instructions for setting up nextflow:
+
+.. code-block:: bash
+
+    export NXF_VER='19.12.0-edge'
+    wget -qO- get.nextflow.io | bash
+
+    nextflow -v
+
 .. Indices and tables
 .. ==================
 .. 
