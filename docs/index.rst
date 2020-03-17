@@ -3,11 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-VSN-Pipelines-examples
-======================
-
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
+    :hidden:
 
 
     Home <self>
@@ -16,17 +14,9 @@ VSN-Pipelines-examples
     PBMC10k
 
 
-Setup Nextflow
---------------
+.. include:: ../README.rst
 
-General instructions for setting up nextflow:
 
-.. code-block:: bash
-
-    export NXF_VER='19.12.0-edge'
-    wget -qO- get.nextflow.io | bash
-
-    nextflow -v
 
 .. Indices and tables
 .. ==================
