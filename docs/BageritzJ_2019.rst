@@ -9,6 +9,9 @@ Some links related to the case study:
 Analysis of 10x Genomics Samples
 ********************************
 
+BBKNN and SCENIC
+++++++++++++++++
+
 The following command was used to generate the config:
 
 .. code:: bash

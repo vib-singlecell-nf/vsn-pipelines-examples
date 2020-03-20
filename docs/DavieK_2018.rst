@@ -9,6 +9,9 @@ Some links related to the case study:
 Analysis of 10x Genomics Samples
 ********************************
 
+BBKNN and SCENIC
+++++++++++++++++
+
 The following command was used to generate the config:
 
 .. code:: bash
@@ -28,11 +31,10 @@ To start the pipeline, run the following command:
 
     nextflow \
         -C nextflow.config \
-        run ~/vib-singlecell-nf/vsn-pipelines \
+        run vib-singlecell-nf/vsn-pipelines \
             -entry sra_cellranger_bbknn_scenic
 
 
 The resulting loom file is available at `daviek_2018_bbknn_scenic.loom`_, and is ready to be explored in `SCope <http://scope.aertslab.org/>`_.
 
 .. _`daviek_2018_bbknn_scenic.loom`: https://cloud.aertslab.org/index.php/s/GzwCBqYAJxXa9n5
-

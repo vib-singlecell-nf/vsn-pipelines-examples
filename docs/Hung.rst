@@ -31,11 +31,10 @@ To start the pipeline, run the following command:
 
     nextflow \
         -C nextflow.config \
-        run ~/vib-singlecell-nf/vsn-pipelines \
+        run vib-singlecell-nf/vsn-pipelines \
             -entry sra_cellranger_bbknn_scenic
 
 
 The resulting loom file is available at `hungr_2019_bbknn_scenic.loom`_, and is ready to be explored in `SCope <http://scope.aertslab.org/>`_.
 
 .. _`hungr_2019_bbknn_scenic.loom`: https://cloud.aertslab.org/index.php/s/3MwXaecjSQqEGHD
-
