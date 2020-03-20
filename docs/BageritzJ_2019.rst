@@ -18,9 +18,9 @@ The following command was used to generate the config:
       > nextflow.config
 
 
-The generated config is available at the ``vsn-pipelines-examples`` GitHub repository: `bageritz_2019/10x_bbknn_scenic.config`_.  You should provide the lines commented with "TO EDIT" with the correct information.
+The generated config is available at the ``vsn-pipelines-examples`` GitHub repository: `bageritzj_2019/10x_bbknn_scenic.config`_.  You should provide the lines commented with "TO EDIT" with the correct information.
 
-.. _`bageritz_2019/10x_bbknn_scenic.config`: https://github.com/vib-singlecell-nf/vsn-pipelines-examples/blob/master/bageritz_2019/10x_bbknn_scenic.config
+.. _`bageritzj_2019/10x_bbknn_scenic.config`: https://github.com/vib-singlecell-nf/vsn-pipelines-examples/blob/master/bageritzj_2019/10x_bbknn_scenic.config
 
 To start the pipeline, run the following command:
 
@@ -32,7 +32,7 @@ To start the pipeline, run the following command:
             -entry sra_cellranger_bbknn_scenic
 
 
-The resulting loom file is available at `bageritz_2019_bbknn_scenic.loom`_, and is ready to be explored in `SCope <http://scope.aertslab.org/>`_.
+The resulting loom file is available at `bageritzj_2019_bbknn_scenic.loom`_, and is ready to be explored in `SCope <http://scope.aertslab.org/>`_.
 
-.. _`bageritz_2019_bbknn_scenic.loom`: https://cloud.aertslab.org/index.php/s/tCiKLHEwdDsFftq
+.. _`bageritzj_2019_bbknn_scenic.loom`: https://cloud.aertslab.org/index.php/s/tCiKLHEwdDsFftq
 
