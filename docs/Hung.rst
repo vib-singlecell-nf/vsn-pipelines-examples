@@ -1,5 +1,5 @@
-Hung et al., 2019 - A cell atlas of the adult Drosophila midgut
----------------------------------------------------------------
+Hung, R.-J. et al., 2019 - A cell atlas of the adult Drosophila midgut
+----------------------------------------------------------------------
 
 Some links related to the case study:
 
@@ -8,6 +8,9 @@ Some links related to the case study:
 
 Analysis of 10x Genomics Samples
 ********************************
+
+BBKNN and SCENIC
+++++++++++++++++
 
 The following command was used to generate the config:
 

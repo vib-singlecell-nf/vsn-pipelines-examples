@@ -19,7 +19,10 @@ Multi-sample workflows
 **********************
 
 * `Analysis of multiple samples in the adult Drosophila midgut <https://vsn-pipelines-examples.readthedocs.io/en/latest/Hung.html>`_
-  (Hung et al., 2019): Obtain expression counts, combine samples, apply BBKNN batch correction, then run SCENIC gene regulatory inference.
+  (Hung, R.-J. et al., 2019): Obtain expression counts, combine samples, apply BBKNN batch correction, then run SCENIC gene regulatory inference.
+
+* `Analysis of multiple samples in the adult Drosophila ageing brain <https://vsn-pipelines-examples.readthedocs.io/en/latest/DavieK_2018.html>`_
+  (Davie, K., Janssens, J., Koldere, D. et al., 2018): Obtain expression counts, combine samples, apply BBKNN batch correction, then run SCENIC gene regulatory inference.
 
 * `Analysis of multiple samples in the Drosophila brain <https://vsn-pipelines-examples.readthedocs.io/en/latest/Kurmangaliyev.html>`_:
   (Kurmangaliyev et al., 2019): Obtain expression counts, combine samples, apply BBKNN (or alternately Harmony) batch correction, then run SCENIC gene regulatory inference.
