@@ -19,13 +19,16 @@ Multi-sample workflows
 **********************
 
 * `Analysis of multiple samples in the adult Drosophila midgut <https://vsn-pipelines-examples.readthedocs.io/en/latest/Hung.html>`_
-  (Hung, R.-J. et al., 2019): Obtain expression counts, combine samples, apply BBKNN batch correction, then run SCENIC gene regulatory inference.
+  (Hung, R.-J. et al., 2019):
 
-* `Analysis of multiple samples in the adult Drosophila ageing brain <https://vsn-pipelines-examples.readthedocs.io/en/latest/DavieK_2018.html>`_
-  (Davie, K., Janssens, J., Koldere, D. et al., 2018): 
   * Obtain expression counts, combine samples, apply BBKNN batch correction, then run SCENIC gene regulatory inference.
   * Obtain expression counts, combine samples, apply Harmony batch correction, then append SCENIC results from the BBKNN run.
 
+* `Analysis of multiple samples in the adult Drosophila ageing brain <https://vsn-pipelines-examples.readthedocs.io/en/latest/DavieK_2018.html>`_
+  (Davie, K., Janssens, J., Koldere, D. et al., 2018):
+
+  * Obtain expression counts, combine samples, apply BBKNN batch correction, then run SCENIC gene regulatory inference.
+  * Obtain expression counts, combine samples, apply Harmony batch correction, then append SCENIC results from the BBKNN run.
 
 * `Analysis of multiple samples in the third instar female larvae Drosophila wing disc <https://vsn-pipelines-examples.readthedocs.io/en/latest/Bageritz_2019.html>`_
   (Bageritz, J., Willnow, P., Valentini, E. et al., 2019):
@@ -38,9 +41,9 @@ Multi-sample workflows
 
 * `Analysis of multiple samples in the third instar female larvae Drosophila Enteroendocrine Cells <https://vsn-pipelines-examples.readthedocs.io/en/latest/GuoX_2019.html>`_
   (Guo, X. et al., 2019):
+
   * Obtain expression counts, combine samples, apply BBKNN batch correction, then run SCENIC gene regulatory inference.
   * Obtain expression counts, combine samples, apply Harmony batch correction, then append SCENIC results from the BBKNN run.
-
 
 * `Analysis of multiple samples in the Drosophila scribble mutant tumors <https://vsn-pipelines-examples.readthedocs.io/en/latest/JiT_2019.html>`_
   (Ji, T., et al., 2019): Obtain expression counts, combine samples, apply BBKNN batch correction, then run SCENIC gene regulatory inference.
