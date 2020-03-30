@@ -31,7 +31,7 @@ To start the pipeline, run the following command:
 
     nextflow \
         -C nextflow.config \
-        run ~/vib-singlecell-nf/vsn-pipelines \
+        run vib-singlecell-nf/vsn-pipelines \
             -entry sra_cellranger_bbknn_scenic
 
 
@@ -39,3 +39,29 @@ The resulting loom file is available at `bageritzj_2019_bbknn_scenic.loom`_, and
 
 .. _`bageritzj_2019_bbknn_scenic.loom`: https://cloud.aertslab.org/index.php/s/DecJoZfFxmBqLpc
 
+Harmony and SCENIC (append mode)
+++++++++++++++++++++++++++++++++
+
+.. code:: bash
+
+    nextflow config \
+        vib-singlecell-nf/vsn-pipelines \
+        -profile tenx,pcacv,harmony,scenic_append_only,singularity \
+        > nextflow.config
+
+The generated config is available at the ``vsn-pipelines`` GitHub repository: `bageritzj_2019/10x_harmony_scenic_append_only.config`_. You should update The lines commented with "TO EDIT" with the correct information.
+
+.. _`bageritzj_2019/10x_harmony_scenic_append_only.config`: https://github.com/vib-singlecell-nf/vsn-pipelines-examples/blob/master/bageritzj_2019/10x_harmony_scenic_append_only.config
+
+To start the pipeline, run the following command:
+
+.. code:: bash
+
+    nextflow \
+        -C nextflow.config \
+        run vib-singlecell-nf/vsn-pipelines \
+            -entry harmony_scenic -resume
+
+The resulting loom file is available at `bageritzj_2019/harmony_scenic_append_only`_ and is ready to be explored in `SCope <http://scope.aertslab.org/>`_.
+
+.. _`bageritzj_2019/harmony_scenic_append_only`: https://cloud.aertslab.org/index.php/s/NeN67EfNYA9GfP2
