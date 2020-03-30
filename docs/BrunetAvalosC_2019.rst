@@ -37,5 +37,5 @@ To start the pipeline, run the following command:
 
 The resulting loom file is available at `brunetavalosc_2019_bbknn_scenic.loom`_, and is ready to be explored in `SCope <http://scope.aertslab.org/>`_.
 
-.. _`brunetavalosc_2019_bbknn_scenic.loom`: https://cloud.aertslab.org/index.php/s/kJB25PqgEpeKf9o
+.. _`brunetavalosc_2019_bbknn_scenic.loom`: https://cloud.aertslab.org/index.php/s/9y2EsJnkYAzzqaE
 

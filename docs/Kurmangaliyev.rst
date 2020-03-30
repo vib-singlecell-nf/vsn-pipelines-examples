@@ -38,4 +38,4 @@ To start the pipeline, run the following command:
 
 The resulting loom file is available at `kurmangaliyevyz_2019_bbknn_scenic.loom`_, and is ready to be explored in `SCope <http://scope.aertslab.org/>`_.
 
-.. _`kurmangaliyevyz_2019_bbknn_scenic.loom`: https://cloud.aertslab.org/index.php/s/g38amGKbfXKTwPA
+.. _`kurmangaliyevyz_2019_bbknn_scenic.loom`: https://cloud.aertslab.org/index.php/s/ygtZgFM29QdzFjT

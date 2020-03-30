@@ -37,4 +37,4 @@ To start the pipeline, run the following command:
 
 The resulting loom file is available at `hungr_2019_bbknn_scenic.loom`_, and is ready to be explored in `SCope <http://scope.aertslab.org/>`_.
 
-.. _`hungr_2019_bbknn_scenic.loom`: https://cloud.aertslab.org/index.php/s/3MwXaecjSQqEGHD
+.. _`hungr_2019_bbknn_scenic.loom`: https://cloud.aertslab.org/index.php/s/rLG224ibeqoKRAF
