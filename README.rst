@@ -40,5 +40,7 @@ Multi-sample workflows
   (Ji, T., et al., 2019): Obtain expression counts, combine samples, apply BBKNN batch correction, then run SCENIC gene regulatory inference.
 
 * `Analysis of multiple samples in the Drosophila larval brain <https://vsn-pipelines-examples.readthedocs.io/en/latest/BrunetAvalosC_2019.html>`_
-  (Brunet Avalos, C. et al., 2019): Obtain expression counts, combine samples, apply BBKNN batch correction, then run SCENIC gene regulatory inference.
+  (Brunet Avalos, C. et al., 2019):
 
+  * Obtain expression counts, combine samples, apply BBKNN batch correction, then run SCENIC gene regulatory inference.
+  * Obtain expression counts, combine samples, apply Harmony batch correction, then append SCENIC results from the BBKNN run.
