@@ -15,6 +15,7 @@ BBKNN and SCENIC
 The following command was used to generate the config:
 
 .. code:: bash
+
     nextflow pull vib-singlecell-nf/vsn-pipelines -r v0.14.2
     nextflow config vib-singlecell-nf/vsn-pipelines -profile \
       sra,cellranger,pcacv,bbknn,dm6,scenic,scenic_use_cistarget_motifs,scenic_use_cistarget_tracks,singularity \
