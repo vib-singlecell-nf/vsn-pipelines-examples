@@ -15,8 +15,15 @@ Single-sample workflows
 * `Analysis of 10k PBMCs from a single healthy human donor <https://vsn-pipelines-examples.readthedocs.io/en/latest/PBMC10k.html>`_
   (10x Genomics): Includes standard "best practices" analysis alongside SCENIC gene regulatory network inference.
 
-Multi-sample workflows
-**********************
+**SCENIC multi-runs**
+
+* `Analysis of 10k PBMCs with multiple SCENIC iterations <https://vsn-pipelines-examples.readthedocs.io/en/latest/PBMC10k_multiruns.html>`_
+  (10x Genomics): Includes standard "best practices" analysis alongside SCENIC gene regulatory network inference.
+
+
+
+Sample aggregation workflows
+****************************
 
 * `Analysis of multiple samples in the adult Drosophila midgut <https://vsn-pipelines-examples.readthedocs.io/en/latest/Hung.html>`_
   (Hung, R.-J. et al., 2019):
