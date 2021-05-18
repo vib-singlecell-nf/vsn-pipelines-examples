@@ -51,7 +51,7 @@ Update the repository
 Pull/update the vsn-pipelines repository cached by nextflow.
 Here, we use the ``-r`` flag to specify the pipeline version to use::
 
-    nextflow pull vib-singlecell-nf/vsn-pipelines -r v0.19.0
+    nextflow pull vib-singlecell-nf/vsn-pipelines -r v0.25.0
 
 Build the config file
 *********************
@@ -61,7 +61,7 @@ We use a combination of profiles to build the config file:
 * ``tenx``: defines the input data type
 * ``single_sample_scenic``: loads the basic parameters to run the single_sample and scenic workflows
 * ``scenic_use_cistarget_motifs`` and ``scenic_use_cistarget_tracks``: includes parameters to specify the location of the cistarget database files
-* ``hg38``: specifies the genome
+* ``hg38``: specifies the genome. Other options are: ``hg19``, ``dm6``, ``mm10``.
 * ``singularity`` (or ``docker``): specifies container system to use to run the processes
 
 .. code-block:: bash
@@ -75,9 +75,14 @@ Important variables to check in the config:
 * ``singularity.runOptions`` (or ``docker.runOptions``): making sure the correct volume mounts are specified (requires the user home folder (included by default in Singularity), and the location of the data).
 * ``params.global.project_name`` (optional): will control the naming of the output files.
 * ``params.sc.scope.tree.level_${X}`` (optional): controls the labeling of the loom file when uploaded to the SCope viewer.
-* ``params.sc.scanpy.filter``
-* ``params.sc.scanpy.feature_selection``
-* ``params.sc.scanpy.clustering``
+* ``params.sc.scanpy.filter``: filtering settings for the Scanpy steps.
+* ``params.sc.scanpy.feature_selection``: controls how highly variable genes are selected.
+* ``params.sc.scanpy.clustering``: controls cluster settings. In the example here, we select two clustering resolutions by using ``resolutions = [0.4,0.8]``.
+
+Specifying compute resource usage in the config:
+
+* The global executor (``process.executor``) is set to ``local`` by default. It can be changed to ``qsub``, etc. to run specific processes as jobs. The executor parameter can be added to specific labels to run only these processes as jobs. Typically the GRN step should be submitted as a job (``compute_resources__scenic_grn``).
+* The number of cpus and memory usage can be adjusted for each label.
 
 The complete config file used here is available at: `pbmc10k/pbmc10k.vsn-pipelines.complete.config`_.
 
@@ -96,11 +101,11 @@ Even though we created a profile with single_sample and scenic options together,
     nextflow -C pbmc10k.vsn-pipelines.complete.config \
         run vib-singlecell-nf/vsn-pipelines \
         -entry single_sample \
-        -r v0.19.0
+        -r v0.25.0
 
 Now, the QC reports can be inspected (see ``out/notebooks/intermediate/pbmc10k.SC_QC_filtering_report.html``, either the original ipynb, or the converted html file).
 The cell and gene filters can be updated by editing the config file.
-For example, the filters used here are::
+For example, the relevant filters used here are::
 
     params {
         sc {
@@ -115,17 +120,24 @@ For example, the filters used here are::
         }
     }
 
+Re-run the pipeline as many times as needed (with ``resume`` to skip alread-completed steps) to select the proper filters::
+
+    nextflow -C pbmc10k.vsn-pipelines.complete.config \
+        run vib-singlecell-nf/vsn-pipelines \
+        -entry single_sample \
+        -r v0.25.0 -resume
+
 
 Second pass
 ***********
 
 Once the cell and gene filters look ok, we can re-start the pipeline with the full SCENIC steps enabled.
-This will re-run the filtering steps and all following steps that depend on the filtering output, while skipping the initial conversion, etc. when the ``-resume`` option is used::
+This will re-run any steps in which the parameters have changed (e.g. the filtering and downstream steps), while skipping the initial conversion, etc. when the ``-resume`` option is used::
 
     nextflow -C pbmc10k.vsn-pipelines.complete.config \
         run vib-singlecell-nf/vsn-pipelines \
         -entry single_sample_scenic \
-        -r v0.19.0 -resume
+        -r v0.25.0 -resume
 
 
 Results
