@@ -50,9 +50,9 @@ Update the repository
 
 Pull/update the vsn-pipelines repository cached by nextflow.
 Here, we use the ``-r`` flag to specify the pipeline version to use::
-
-    nextflow pull vib-singlecell-nf/vsn-pipelines -r v0.25.0
-
+    
+    nextflow pull vib-singlecell-nf/vsn-pipelines
+    
 Build the config file
 *********************
 
@@ -100,8 +100,7 @@ Even though we created a profile with single_sample and scenic options together,
 
     nextflow -C pbmc10k.vsn-pipelines.complete.config \
         run vib-singlecell-nf/vsn-pipelines \
-        -entry single_sample \
-        -r v0.25.0
+        -entry single_sample
 
 Now, the QC reports can be inspected (see ``out/notebooks/intermediate/pbmc10k.SC_QC_filtering_report.html``, either the original ipynb, or the converted html file).
 The cell and gene filters can be updated by editing the config file.
@@ -124,8 +123,7 @@ Re-run the pipeline as many times as needed (with ``resume`` to skip alread-comp
 
     nextflow -C pbmc10k.vsn-pipelines.complete.config \
         run vib-singlecell-nf/vsn-pipelines \
-        -entry single_sample \
-        -r v0.25.0 -resume
+        -entry single_sample
 
 
 Second pass
@@ -137,8 +135,7 @@ This will re-run any steps in which the parameters have changed (e.g. the filter
     nextflow -C pbmc10k.vsn-pipelines.complete.config \
         run vib-singlecell-nf/vsn-pipelines \
         -entry single_sample_scenic \
-        -r v0.25.0 -resume
-
+        -resume
 
 Results
 -------
