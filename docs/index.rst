@@ -7,8 +7,21 @@
     :maxdepth: 2
     :hidden:
 
-
     Home <self>
+
+.. toctree::
+    :maxdepth: 2
+    :hidden:
+    :caption: Single-sample workflows
+
+    PBMC10k
+    PBMC10k_multiruns
+
+.. toctree::
+    :maxdepth: 2
+    :hidden:
+    :caption: Sample aggregation workflows
+
     Hung
     DavieK_2018
     BageritzJ_2019
@@ -16,7 +29,6 @@
     GuoX_2019
     JiT_2019
     BrunetAvalosC_2019
-    PBMC10k
 
 
 .. include:: ../README.rst
