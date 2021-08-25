@@ -45,7 +45,7 @@ Update the repository
 
 Pull/update the vsn-pipelines repository cached by nextflow::
 
-    nextflow pull vib-singlecell-nf/vsn-pipelines -r v0.14.2
+    nextflow pull vib-singlecell-nf/vsn-pipelines
 
 Build the config file
 *********************
@@ -88,8 +88,7 @@ Even though we created a profile with single_sample and scenic options together,
 
     nextflow -C pbmc10k.vsn-pipelines.complete.config \
         run vib-singlecell-nf/vsn-pipelines \
-        -entry single_sample \
-        -r 0.14.2
+        -entry single_sample
 
 Now, the QC reports can be inspected, and the cell and gene filters can be updated by editing the config file.
 
@@ -101,6 +100,6 @@ Once the filters look ok, we can re-start the pipeline with the full SCENIC step
     nextflow -C pbmc10k.vsn-pipelines.complete.config \
         run vib-singlecell-nf/vsn-pipelines \
         -entry single_sample_scenic \
-        -r 0.14.2 -resume
+        -resume
 
 
